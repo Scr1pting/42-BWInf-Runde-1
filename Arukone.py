@@ -1,4 +1,3 @@
-import math
 import random
 
 def generate_arukone(field_size: int, pairs: int) -> list:
@@ -22,16 +21,15 @@ def generate_arukone(field_size: int, pairs: int) -> list:
     return field
 
 def get_surrounding_elements(arr, row: int, col: int) -> tuple:
-
     surrounding = []
     num_rows = len(arr)
     num_cols = len(arr[0])
 
     # Define the relative positions of the surrounding elements
     positions = [
-        (-1, -1), (-1, 0), (-1, 1),
-        (0, -1),           (0, 1),
-        (1, -1), (1, 0), (1, 1)
+                (-1, 0),
+        (0, -1),        (0, 1),
+                (1, 0)
     ]
 
     for row_offset, col_offset in positions:
@@ -43,32 +41,33 @@ def get_surrounding_elements(arr, row: int, col: int) -> tuple:
 
     return surrounding
 
-def find_path(arukone: list, path: list) -> tuple:
-    row, col = path[-1]
+def find_path(arukone: list, original_path: list) -> tuple:
+    _, row, col = original_path[-1]
 
-    elements = get_surrounding_elements(arukone, row, col)
-
+    surrounding_elements = get_surrounding_elements(arukone, row, col)
+    
     paths = []
-    all_paths = []
+    valid_paths = []
 
-    for element in elements:
-        value, element_row, element_col = element
+    for element in surrounding_elements:
+        value = element[0]
         
-        if value == 0 and (element_row, element_col) not in path:
-            paths.append(path + [(element_row, element_col)])
+        if element not in original_path:
+            if value == original_path[0][0]:
+                valid_paths.append(original_path + [element])
+            elif value == 0:
+                paths.append(original_path + [element])
 
     for path in paths:
-        all_paths = find_path(arukone, path)
-        print(find_path(arukone, path))
+        valid_paths += find_path(arukone, path)
 
-    return all_paths
+    return valid_paths
 
 
-print(find_path([
-[0, 0, 0, 0, 0, 0, 0],
-[0, 0, 0, 0, 0, 0, 0],
-[0, 0, 0, 0, 1, 0, 0],
-[0, 0, 0, 2, 1, 0, 0],
-[0, 0, 0, 0, 0, 0, 0],
-[0, 0, 0, 0, 0, 0, 0],
-[0, 0, 0, 0, 2, 0, 0]], [(2, 4)]))
+paths = find_path([
+[0, 0, 0],
+[0, 1, 1],
+[0, 0, 0]], [(1, 1, 1)])
+
+for path in paths:
+    print(path)
