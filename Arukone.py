@@ -20,17 +20,21 @@ def generate_arukone(field_size: int, pairs: int) -> list:
 
     return field
 
+def find_first_occurrence(arr, target):
+        for row_index, row in enumerate(arr):
+            for col_index, value in enumerate(row):
+                if value == target:
+                    return (row_index, col_index)  # Return the indices of the first occurrence
+
+        return None  # Return None if the element is not found in the array
+
 def get_surrounding_elements(arr, row: int, col: int) -> tuple:
     surrounding = []
     num_rows = len(arr)
     num_cols = len(arr[0])
 
     # Define the relative positions of the surrounding elements
-    positions = [
-                (-1, 0),
-        (0, -1),        (0, 1),
-                (1, 0)
-    ]
+    positions = [(-1, 0), (0, -1), (0, 1), (1, 0)]
 
     for row_offset, col_offset in positions:
         r = row + row_offset
@@ -49,6 +53,10 @@ def find_path(arukone: list, original_path: list) -> tuple:
     paths = []
     valid_paths = []
 
+    # Detect whether path touches itself
+    if len(set(original_path) & set(surrounding_elements)) > 1:
+        return []
+    
     for element in surrounding_elements:
         value = element[0]
         
@@ -63,11 +71,29 @@ def find_path(arukone: list, original_path: list) -> tuple:
 
     return valid_paths
 
+def find_first_occurrence(arr, target):
+        for row_index, row in enumerate(arr):
+            for col_index, value in enumerate(row):
+                if value == target:
+                    return (row_index, col_index)  # Return the indices of the first occurrence
+
+        return None  # Return None if the element is not found in the array
+
+def solve_arukone(arukone: list, pairs: int):
+    all_paths = []
+
+    for pair in pairs:
+        paths = find_first_occurrence(arukone, pair + 1)
+        all_paths.append(paths)
+
 
 paths = find_path([
-[0, 0, 0],
-[0, 1, 1],
-[0, 0, 0]], [(1, 1, 1)])
+[1, 0, 2, 4, 0, 0],
+[0, 0, 3, 0, 5, 0],
+[0, 0, 1, 0, 0, 0],
+[0, 0, 0, 0, 0, 4],
+[0, 2, 0, 0, 0, 0],
+[0, 0, 0, 3, 0, 5]], [(1, 0, 0)])
 
 for path in paths:
     print(path)
