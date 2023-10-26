@@ -1,8 +1,8 @@
 from utility import get_surrounding_elements
 
 
-def find_path(arukone: list, original_path: list) -> list:
-    """A recursive function that finds all valid paths that lead 
+def find_paths(arukone: list, original_path: list) -> list:
+    """A recursive function that finds all paths that lead 
     from a number to its matching number.
 
     Args:
@@ -24,7 +24,7 @@ def find_path(arukone: list, original_path: list) -> list:
     # Detect whether path touches itself by checking if there's more than one 
     # common element between the original path and surrounding elements.
     # If it does, the path is discarded. It does not provide a new solution as there is already 
-    # a path that branches of earlier, but only uses unnecessary computing resources.
+    # a path that branches off earlier and only uses unnecessary computing resources.
     if len(set(original_path) & set(surrounding_elements)) > 1:
         return []
     
@@ -45,7 +45,7 @@ def find_path(arukone: list, original_path: list) -> list:
 
     # Continue extending path recursively one element at a time
     for path in paths:
-        valid_paths += find_path(arukone, path)
+        valid_paths += find_paths(arukone, path)
 
     # Return the completed list of valid paths for one pair
     return valid_paths

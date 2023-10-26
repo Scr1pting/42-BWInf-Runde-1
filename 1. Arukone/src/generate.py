@@ -1,5 +1,5 @@
 from utility import get_surrounding_elements
-from solve import find_path, has_path_combination
+from solve import find_paths, has_path_combination
 
 import random
 
@@ -43,7 +43,7 @@ def is_solvable_arukone(arukone: list, pairs: int) -> bool:
         # Determine the indices of the first occurrence of a pair
         row, col = find_first_occurrence(arukone, pair)
         # Find paths between the two numbers of the pair
-        paths = find_path(arukone, [(pair, row, col)])
+        paths = find_paths(arukone, [(pair, row, col)])
         # Append the paths to all_paths
         all_paths.append(paths)
 
@@ -84,7 +84,10 @@ def generate_arukone(field_size: int, pairs: int) -> list:
         col = random.randint(0, field_size - 1)
         
         # Check whether spot is empty and that the same number is not directly next to it
-        if field[row][col] == 0 and (value, row, col) not in get_surrounding_elements(arr=field, row=row, col=col):
+        # To detect if the same value is directly neighboring, the first element from each
+        # tuple containing (value, row, column) is comprehended into a list. It is then
+        # checked whether the list already contains the number
+        if field[row][col] == 0 and value not in [element[0] for element in get_surrounding_elements(arr=field, row=row, col=col)]:
             # Fill field
             field[row][col] = value
         else:
