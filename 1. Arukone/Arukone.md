@@ -50,10 +50,12 @@ Number of pairs: 6
 
 ### Beispiel eines generierten Arukones, das nicht von [Arukone-Checker](https://www.arukone.bwinf.de/arukone) gelöst werden konnte:
 
-![Unsolved 6x6 Arukone](examples/unsolved_6x6_arukone.png)
+<img src="examples/unsolved_6x6_arukone.png" width=350px alt="Unsolved 6x6 Arukone" />
+
 *Ausgabe des Arukone-Checkers für ein 6x6 Arukone mit 6 Paaren*
 
 ### Beispiel eines generierten Arukones, das von [Arukone-Checker](https://www.arukone.bwinf.de/arukone) gelöst werden konnte:
 
-![Unsolved 8x8 Arukone](examples/solved_5x5_arukone.png)
+<img src="examples/solved_5x5_arukone.png" width=350px alt="Solved 5x5 Arukone" />
+
 *Ausgabe des Arukone-Checkers für ein 5x5 Arukone mit 4 Paaren*
