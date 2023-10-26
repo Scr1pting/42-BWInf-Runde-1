@@ -48,15 +48,15 @@ Number of pairs: 6
 1 2 0 6 5 0
 ```
 
-### Beispiel eines generierten Arukones, das nicht von [Arukone-Checker](https://www.arukone.bwinf.de/arukone) gelöst werden konnte:
+### Beispiel eines generierten Arukones, das nicht vom [Arukone-Checker](https://www.arukone.bwinf.de/arukone) gelöst werden konnte:
 
-<img src="examples/unsolved_6x6_arukone.png" width=350px alt="Unsolved 6x6 Arukone" />
+<img src="examples/unsolved_6x6_arukone.png" width=300px alt="Unsolved 6x6 Arukone" />
 
 *Ausgabe des Arukone-Checkers für ein 6x6 Arukone mit 6 Paaren*
 
-### Beispiel eines generierten Arukones, das von [Arukone-Checker](https://www.arukone.bwinf.de/arukone) gelöst werden konnte:
+### Beispiel eines generierten Arukones, das vom [Arukone-Checker](https://www.arukone.bwinf.de/arukone) gelöst werden konnte:
 
-<img src="examples/solved_5x5_arukone.png" width=350px alt="Solved 5x5 Arukone" />
+<img src="examples/solved_5x5_arukone.png" width=300px alt="Solved 5x5 Arukone" />
 
 *Ausgabe des Arukone-Checkers für ein 5x5 Arukone mit 4 Paaren*
 
