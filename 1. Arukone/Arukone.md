@@ -64,17 +64,17 @@ Number of pairs: 6
 
 Der Quelltext besteht aus drei Dateien:
 
-### [generate.py](src/generate.py)
+### generate.py
 
 - `find_first_occurrence(arr: list, target: any) -> tuple` — Findet das erste Vorkommen eines Zielelements in einer Liste.
 - `is_solvable_arukone(arukone: list, pairs: int) -> bool` — Prüft, ob eine Arukone lösbar ist.
 - `generate_arukone(field_size: int, pairs: int) -> list` — Erstellt ein lösbares Arukone
 
-### [solve.py](src/solve.py)
+### solve.py
 
 - `find_paths(arukone: list, original_path: list) -> list` — Findet rekursiv alle Pfade, die von dem einen zu dem anderen Auftreten einer Zahl führen.
 - `has_path_combination(all_paths: list, existing_path_combination: list = [], index: int = 0) -> bool` — Überprüft, ob es eine gültige Kombination von Pfaden gibt, bei der jedes Zahlenpaar verbunden ist.
 
-### [utility.py](src/utility.py)
+### utility.py
 
 - `get_surrounding_elements(arr: list, row: int, col: int) -> list` — Ermittelt die Elemente, die sich in einem 2D-Array neben einem Element befinden.
