@@ -82,39 +82,23 @@ def generate_arukone(field_size: int, pairs: int) -> list:
     
     field = [[0 for _ in range(field_size)] for _ in range(field_size)]
 
-    for i in range(1, pairs + 1):
-        index_row_a = random.randint(0, field_size - 1)
-        index_item_a = random.randint(0, field_size - 1)
+    def fill_field(value: int):
+        index_row = random.randint(0, field_size - 1)
+        index_col = random.randint(0, field_size - 1)
+        
+        if field[index_row][index_col] == 0:
+            field[index_row][index_col] = value
+        else: 
+            fill_field(value)
 
-        index_row_b = random.randint(0, field_size - 1)
-        index_item_b = random.randint(0, field_size - 1)
-
-        if field[index_row_a][index_item_a] == 0: 
-            field[index_row_a][index_item_a] = i
-        if field[index_row_b][index_row_b] == 0:
-            field[index_row_b][index_item_b] = i
+    for value in range(1, pairs + 1):
+        fill_field(value)
+        fill_field(value)
 
     if not is_solvable_arukone(field, pairs):
         return generate_arukone(field_size, pairs)
 
     return field
 
-print(is_solvable_arukone([
-[1, 0, 2, 4, 0, 0],
-[0, 0, 3, 0, 5, 0],
-[0, 0, 1, 0, 0, 0],
-[0, 0, 0, 0, 0, 4],
-[0, 2, 0, 0, 0, 0],
-[0, 0, 0, 3, 0, 5]], 5))
-
-# print(is_solvable_arukone([
-# [1, 0, 0, 0, 0, 0, 0],
-# [0, 0, 0, 0, 0, 0, 0],
-# [0, 0, 0, 0, 0, 0, 0],
-# [2, 0, 0, 0, 0, 0, 2],
-# [0, 0, 0, 0, 0, 0, 0],
-# [0, 0, 0, 0, 0, 0, 0],
-# [0, 0, 0, 0, 0, 0, 1]], 2))
-
 for row in generate_arukone(6, 5):
-    print(row)
+    print(' '.join(map(str, row)))
