@@ -36,7 +36,7 @@ Falls sein Ergebniss True ist, ergibt auch `is_solvable_arukone` True und das Ar
 
 ### Nutzung des Programms in der Konsole:
 
-```console
+```
 user@computer Bundeswettbewerb Informatik % python3 generate.py
 Field size: 6
 Number of pairs: 6
@@ -59,3 +59,22 @@ Number of pairs: 6
 <img src="examples/solved_5x5_arukone.png" width=350px alt="Solved 5x5 Arukone" />
 
 *Ausgabe des Arukone-Checkers für ein 5x5 Arukone mit 4 Paaren*
+
+## Quelltext
+
+Der Quelltext besteht aus drei Dateien:
+
+### [generate.py](src/generate.py)
+
+- `find_first_occurrence(arr: list, target: any) -> tuple` — Findet das erste Vorkommen eines Zielelements in einer Liste.
+- `is_solvable_arukone(arukone: list, pairs: int) -> bool` — Prüft, ob eine Arukone lösbar ist.
+- `generate_arukone(field_size: int, pairs: int) -> list` — Erstellt ein lösbares Arukone
+
+### [solve.py](src/solve.py)
+
+- `find_paths(arukone: list, original_path: list) -> list` — Findet rekursiv alle Pfade, die von dem einen zu dem anderen Auftreten einer Zahl führen.
+- `has_path_combination(all_paths: list, existing_path_combination: list = [], index: int = 0) -> bool` — Überprüft, ob es eine gültige Kombination von Pfaden gibt, bei der jedes Zahlenpaar verbunden ist.
+
+### [utility.py](src/utility.py)
+
+- `get_surrounding_elements(arr: list, row: int, col: int) -> list` — Ermittelt die Elemente, die sich in einem 2D-Array neben einem Element befinden.

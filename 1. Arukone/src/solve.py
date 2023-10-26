@@ -2,8 +2,7 @@ from utility import get_surrounding_elements
 
 
 def find_paths(arukone: list, original_path: list) -> list:
-    """A recursive function that finds all paths that lead 
-    from a number to its matching number.
+    """Recursively finds all paths that lead from a number to its matching number.
 
     Args:
         arukone (list): a 2d array of the field. Empty squares have a value of 0
@@ -52,7 +51,7 @@ def find_paths(arukone: list, original_path: list) -> list:
 
 
 def has_path_combination(all_paths: list, existing_path_combination: list = [], index: int = 0) -> bool:
-    """Recursive function that checks if there is a valid combination of paths that connects
+    """Recursively checks if there is a valid combination of paths that connects
     all pairs of numbers.
 
     Args:
