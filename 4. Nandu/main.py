@@ -22,8 +22,6 @@ def generate_lights_matrix(construction: list, lamps: dict) -> list:
         lights_in_row = []
         skip = False
 
-        print(row)
-
         for col_index, value in enumerate(row):
             if skip:
                 skip = False
@@ -49,8 +47,6 @@ def generate_lights_matrix(construction: list, lamps: dict) -> list:
                 skip = True
             elif value == "W":
                 temp_value = 0 if lights[row_index - 1][col_index] + lights[row_index - 1][col_index + 1] == 2 else 1
-
-                print(str(temp_value) + " " + str(lights[row_index - 1][col_index] + lights[row_index - 1][col_index + 1]))
 
                 lights_in_row.append(temp_value)
                 lights_in_row.append(temp_value)
