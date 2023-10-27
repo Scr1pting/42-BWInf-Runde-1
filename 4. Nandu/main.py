@@ -95,7 +95,6 @@ def generate_table(construction: list) -> str:
 
     return table
 
-
 def start_command_line_interface():
     path_to_construction = input("Path to construction: " )
 
@@ -117,7 +116,7 @@ def start_command_line_interface():
 
     # Loop through the lines
     for line in construction_file:
-        if re.search(r"\d+\s\d+", line):
+        if re.search(r"\d+\s\d+", line) or line.rstrip() == "":
             continue
 
         # Split the line into individual elements
@@ -126,21 +125,14 @@ def start_command_line_interface():
         # Append the elements as a row to the matrix
         construction.append(elements)
 
+    table = generate_table(construction=construction)
+
+    if save_path:
+        with open(save_path, "w") as file:
+            file.writelines(str(table))
+    else:
+        print(table)
 
 
-print(generate_table([
-    ['X','X','X','X','X','Q1','Q2','X','X','Q3','Q4','X','X','Q5','Q6','X','X','X','X','X','X','X'],
-    ['X','X','X','X','X','R','r','X','X','r','R','X','X','R','r','X','X','X','X','X','X','X'],
-    ['X','X','X','X','r','R','R','r','r','R','R','r','r','R','R','r','X','X','X','X','X','X'],  
-    ['X','X','X','X','W','W','B','B','W','W','B','B','W','W','B','B','X','X','X','X','X','X'],
-    ['X','X','X','r','R','B','B','B','B','B','B','B','B','B','B','R','r','X','X','X','X','X'],
-    ['X','X','r','R','B','B','X','B','B','B','B','B','B','B','B','X','R','r','X','X','X','X'],
-    ['X','r','R','B','B','R','r','B','B','B','B','B','B','B','B','r','R','R','r','X','X','X'],
-    ['X','X','B','B','W','W','B','B','X','B','B','B','B','B','B','W','W','B','B','X','X','X'],  
-    ['X','r','R','W','W','W','W','R','r','W','W','W','W','W','W','W','W','W','W','r','X','X'],
-    ['X','W','W','B','B','W','W','X','B','B','W','W','B','B','W','W','B','B','R','r','X','X'],
-    ['r','R','B','B','B','B','R','r','X','B','B','B','B','B','B','B','B','B','B','R','r','X'],
-    ['X','B','B','B','B','B','B','R','r','B','B','B','B','B','B','B','B','B','B','W','W','X'],
-    ['r','R','B','B','B','B','B','B','B','B','B','B','B','B','B','B','B','B','B','B','R','r'],
-    ['L1','X','X','X','X','L2','X','X','X','X','L3','X','L4','X','X','X','X','X','X','X','L5']
-]))
+if __name__ == "__main__":
+    start_command_line_interface()
