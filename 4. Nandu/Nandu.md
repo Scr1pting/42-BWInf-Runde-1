@@ -27,6 +27,7 @@ flowchart TB
     generate_table -- Konstruktion --> generate_lights_matrix 
     generate_lights_matrix -- Licht Matrix --> generate_table
 ```
+*Flowchart des Programms*
 
 ## Beispiele
 
