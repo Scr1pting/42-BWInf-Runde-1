@@ -62,6 +62,9 @@ def has_path_combination(all_paths: list, existing_path_combination: list = [], 
     Returns:
         bool: whether or not there is a valid combination of paths connecting all pairs of numbers
     """
+
+    # TODO Try using itertools to generate all path combinations. Thereby, the maximum recursion depth of 6 can be circumvented
+
     # Get a list of the paths at the provided index of the all_paths array
     paths = all_paths[index]
 
