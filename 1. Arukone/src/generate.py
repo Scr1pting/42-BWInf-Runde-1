@@ -109,7 +109,8 @@ def generate_arukone(field_size: int, pairs: int) -> list:
     return field
 
 
-if __name__ == "__main__": # Check whether generate.py runs as main program
+# Check whether generate.py runs as main program
+if __name__ == "__main__":
     # Prompt user for field size and number of pairs
     field_size = int(input("Field size: "))
     pairs = int(input("Number of pairs: "))

@@ -18,6 +18,18 @@ Das Programm erstellt zufällig aufgebaute Arukino-Puzzel. Danach überprüft es
 
 Die Lösungsidee wird in Python implementiert.
 
+```mermaid
+graph
+    Nutzer -- Größe Feld, <br> Anzahl Zahlenpaare --> generate_arukone
+    generate_arukone -- Arukone --> is_solvable_arukone
+    generate_arukone -- Arukone --> Nutzer
+    is_solvable_arukone -- lösbar oder nicht --> generate_arukone
+    is_solvable_arukone -- Arukone --> find_paths
+    find_paths -- all möglichen Pfäde <br> zwischen einem Zahlenpaar --> is_solvable_arukone
+    is_solvable_arukone -- alle Pfäde <br> aller Zahlenpaare--> has_combination
+    has_combination -- lösbar oder nicht --> is_solvable_arukone
+```
+
 Beim Ausführen der Datei `generate.py` wird der Nutzer zuerst nach der Größe des Feldes und der Anzahl an Zahlenpaaren gefragt. Danach wird die Funktion `generate_arukone` aufgerufen.
 
 Sie erstellt ein Feld und platziert die Ziffern an zufälligen Stellen. Um zu überprüfen, ob das generierte Spielfeld lösbar ist, ruft sie die Funktion `is_solvable_arukone` auf. Falls das Arukone nicht lösbar ist, generiert sie ein neues Arukone.
