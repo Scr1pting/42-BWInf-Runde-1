@@ -5,7 +5,7 @@ def find_paths(arukone: list, original_path: list) -> list:
     """Recursively finds all paths that lead from a number to its matching number.
 
     Args:
-        arukone (list): a 2d array of the field. Empty squares have a value of 0
+        arukone (list): a 2d list of the field. Empty squares have a value of 0
         original_path (list): the path that gets extended
 
     Returns:
@@ -55,9 +55,9 @@ def has_path_combination(all_paths: list, existing_path_combination: list = [], 
     all pairs of numbers.
 
     Args:
-        all_paths (list): a 3d array containing the paths of all pairs of numbers.
+        all_paths (list): a 3d list containing the paths of all pairs of numbers.
         existing_path_combination (list, optional): A one-dimensional list containing the tuples of the paths of the previously already checked number pairs. Defaults to [].
-        index (int, optional): Index of the 3d array. Defaults to 0.
+        index (int, optional): Index of the 3d list. Defaults to 0.
 
     Returns:
         bool: whether or not there is a valid combination of paths connecting all pairs of numbers
@@ -65,7 +65,7 @@ def has_path_combination(all_paths: list, existing_path_combination: list = [], 
 
     # TODO Try using itertools to generate all path combinations. Thereby, the maximum recursion depth of 6 can be circumvented
 
-    # Get a list of the paths at the provided index of the all_paths array
+    # Get a list of the paths at the provided index of the all_paths list
     paths = all_paths[index]
 
     # Iterate of each path 
@@ -73,7 +73,7 @@ def has_path_combination(all_paths: list, existing_path_combination: list = [], 
         # Check that there is no overlap between the new path and the existing combination of paths
         if len(set(path) & set(existing_path_combination)) == 0:
             if index == len(all_paths) - 1:
-                # Last element in array
+                # Last element in list
                 # Means that all previous checks succeeded, and that there is a possible solution
                 return True
             else:

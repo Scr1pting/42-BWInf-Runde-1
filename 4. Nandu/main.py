@@ -152,8 +152,8 @@ def start_command_line_interface():
     """
     path_to_construction = input("Path to construction: " )
 
-    # Continuously ask user whether or not to save the table to the disk until they
-    # enter a valid input
+    # Continuously ask user whether or not to save the table to the disk until 
+    # they enter a valid input
     while True:
         save_question = input("Save table to disk (yes/no): ")
         if save_question.lower() in ["yes", "y"]:

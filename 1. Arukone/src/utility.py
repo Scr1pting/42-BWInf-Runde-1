@@ -1,11 +1,11 @@
 def get_surrounding_elements(arr: list, row: int, col: int) -> list:
-    """Determines the elements that are next to an element in a 2d array.
+    """Determines the elements that are next to an element in a 2d list.
     Does not determine diagonally adjacent elements.
 
     Args:
-        arr (list): 2d array
-        row (int): row of array
-        col (int): column of array
+        arr (list): 2d list
+        row (int): row of list
+        col (int): column of list
 
     Returns:
         list: contains tuples, each with value, row, column
@@ -13,7 +13,7 @@ def get_surrounding_elements(arr: list, row: int, col: int) -> list:
     # Initialize an empty list to store the surrounding elements
     surrounding = []
 
-    # Determine the number of rows and columns in the 2D array
+    # Determine the number of rows and columns in the 2D list
     num_rows = len(arr)
     num_cols = len(arr[0])
 
@@ -26,7 +26,7 @@ def get_surrounding_elements(arr: list, row: int, col: int) -> list:
         r = row + row_offset  # Calculate the row index of the neighboring element
         c = col + col_offset  # Calculate the column index of the neighboring element
 
-        # Check if the calculated row and column indices are within the bounds of the array
+        # Check if the calculated row and column indices are within the bounds of the list
         if 0 <= r < num_rows and 0 <= c < num_cols:
             # If the indices are valid, append a tuple containing
             # value, row index, column index of the neighboring element

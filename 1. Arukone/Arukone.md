@@ -90,4 +90,4 @@ Der Quelltext besteht aus drei Dateien:
 
 ### utility.py
 
-- `get_surrounding_elements(arr: list, row: int, col: int) -> list` — Ermittelt die Elemente, die sich in einem 2D-Array neben einem Element befinden.
+- `get_surrounding_elements(arr: list, row: int, col: int) -> list` — Ermittelt die Elemente, die sich in einer 2D-Liste neben einem Element befinden.

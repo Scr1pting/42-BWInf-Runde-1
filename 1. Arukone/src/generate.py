@@ -22,7 +22,7 @@ def find_first_occurrence(arr: list, target: any) -> tuple:
                 # Return the indices of the first occurrence
                 return (row_index, col_index)
 
-    return None # Return None if the element is not found in the array
+    return None # Return None if the element is not found in the list
 
 
 def is_solvable_arukone(arukone: list, pairs: int) -> bool:
@@ -31,7 +31,7 @@ def is_solvable_arukone(arukone: list, pairs: int) -> bool:
     Note: May take very long to compute as it goes through every possible combination of paths.
 
     Args:
-        arukone (list): a 2d array of the field. Empty squares have a value of 0
+        arukone (list): a 2d list of the field. Empty squares have a value of 0
         pairs (int): the amount of number pairs
 
     Returns:
@@ -109,8 +109,10 @@ def generate_arukone(field_size: int, pairs: int) -> list:
     return field
 
 
-# Check whether generate.py runs as main program
-if __name__ == "__main__":
+def start_command_line_interface():
+    """Starts command line interface that asks user for field size and the number of pairs.
+    It then prints a valid arukone.
+    """
     # Prompt user for field size and number of pairs
     field_size = int(input("Field size: "))
     pairs = int(input("Number of pairs: "))
@@ -118,3 +120,8 @@ if __name__ == "__main__":
     # Neatly print arukone
     for row in generate_arukone(field_size=field_size, pairs=pairs):
         print(' '.join(map(str, row)))
+
+
+# Check whether generate.py runs as main program
+if __name__ == "__main__":
+    start_command_line_interface
