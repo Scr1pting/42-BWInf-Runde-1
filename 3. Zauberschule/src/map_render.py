@@ -119,6 +119,6 @@ def render_path(blueprint: list, path: list, render_mode="characters") -> str:
         text_guide += "\n"
     
     # Finish guide by stating its length
-    text_guide += f"Total length of path: {len(path) - 1}"
+    text_guide += f"Total length of path: {len(path) - 1} seconds"
 
     return text_guide
