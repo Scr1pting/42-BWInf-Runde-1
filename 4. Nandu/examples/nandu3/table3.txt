@@ -1,0 +1,12 @@
++-----+-----+-----+-----+-----+-----+-----+
+|  Q1 |  Q2 |  Q3 |  L1 |  L2 |  L3 |  L4 |
++-----+-----+-----+-----+-----+-----+-----+
+| Off | Off | Off |  On | Off | Off |  On |
+| Off | Off |  On |  On | Off | Off | Off |
+| Off |  On | Off |  On | Off |  On |  On |
+| Off |  On |  On |  On | Off |  On | Off |
+|  On | Off | Off | Off |  On | Off |  On |
+|  On | Off |  On | Off |  On | Off | Off |
+|  On |  On | Off | Off |  On |  On |  On |
+|  On |  On |  On | Off |  On |  On | Off |
++-----+-----+-----+-----+-----+-----+-----+
