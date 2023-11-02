@@ -1,8 +1,8 @@
-# Arukone
+# Nandu
 
 **Team-ID:** ==XYZ== <br>
 **Autor:** Jonas B <br>
-**Datum:** 26. Oktober 2023
+**Datum:** 29. Oktober 2023
 
 ## Inhaltsverzeichnis
 
@@ -34,9 +34,9 @@ flowchart TB
     generate_table -- Konstruktion --> generate_lights_matrix 
     generate_lights_matrix -- Licht Matrix --> generate_table
 ```
-*Flowchart des Programms*
+*Flowchart des Programms. Helferfunktionen wurden ausgelassen*
 
-Beim Ausführen der Datei main.py läuft die Funktion `start_commmand_line_interface`. Sie fragt den Nutzer nach dem Pfad der Konstruktion und ob die Tabelle als Datei gespeichert werden soll oder nur in der Konsole ausgegeben. Falls Speichern gewählt wurde, fragt das Programm zusätzlich den Speicherpfad ab.
+Beim Ausführen der Datei `main.py`` läuft die Funktion `start_commmand_line_interface`. Sie fragt den Nutzer nach dem Pfad der Konstruktion und ob die Tabelle als Datei gespeichert werden soll oder nur in der Konsole ausgegeben. Falls Speichern gewählt wurde, fragt das Programm zusätzlich den Speicherpfad ab.
 
 Danach wird die Konstruktionsdatei eingelesen. Mithilfe von Regex werden die Dimensionen der Konstruktion übersprungen. Der Rest wird in eine Liste eingelesen. Die Liste wird an die Funktion `generate_table` weitergegeben. Die generierte Tabelle wird entweder gespeichert oder in der Konsole ausgegeben.
 
@@ -52,7 +52,7 @@ Die Funktion `generate_lights_matrix` iteriert über jedes Element der Konstrukt
 
 ```
 user@computer 4. Nandu % python3 main.py
-Path to construction: examples/Nandu 1/nandu1.txt
+Path to construction: examples/nandu1/nandu1.txt
 Save table to disk (yes/no): no
 +-----+-----+-----+-----+
 |  Q1 |  Q2 |  L1 |  L2 |
@@ -68,7 +68,7 @@ Save table to disk (yes/no): no
 
 ```
 user@computer 4. Nandu % python3 main.py
-Path to construction: examples/Nandu 2/nandu2.txt
+Path to construction: examples/nandu2/nandu2.txt
 Save table to disk (yes/no): no
 +-----+-----+-----+-----+
 |  Q1 |  Q2 |  L1 |  L2 |
@@ -84,7 +84,7 @@ Save table to disk (yes/no): no
 
 ```
 user@computer 4. Nandu % python3 main.py
-Path to construction: examples/Nandu 3/nandu3.txt
+Path to construction: examples/nandu3/nandu3.txt
 Save table to disk (yes/no): no
 +-----+-----+-----+-----+-----+-----+-----+
 |  Q1 |  Q2 |  Q3 |  L1 |  L2 |  L3 |  L4 |
@@ -104,7 +104,7 @@ Save table to disk (yes/no): no
 
 ```
 user@computer 4. Nandu % python3 main.py
-Path to construction: examples/Nandu 4/nandu4.txt            
+Path to construction: examples/nandu4/nandu4.txt            
 Save table to disk (yes/no): no
 +-----+-----+-----+-----+-----+-----+
 |  Q1 |  Q2 |  Q3 |  Q4 |  L1 |  L2 |
@@ -132,7 +132,7 @@ Save table to disk (yes/no): no
 
 ```
 user@computer 4. Nandu % python3 main.py
-Path to construction: examples/Nandu 5/nandu5.txt
+Path to construction: examples/nandu5/nandu5.txt
 Save table to disk (yes/no): no
 +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
 |  Q1 |  Q2 |  Q3 |  Q4 |  Q5 |  Q6 |  L1 |  L2 |  L3 |  L4 |  L5 |
