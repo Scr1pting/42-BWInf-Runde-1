@@ -68,6 +68,8 @@ Number of pairs: 6
 
 *Ausgabe des Arukone-Checkers für ein 6x6 Arukone mit 6 Paaren*
 
+Das Arukone hätte gelöst werden können, indem die Linie der zweien oberhalb verläuft. Dann hätten die vieren Platz, auch verbunden zu werden.
+
 ### Beispiel eines generierten Arukones, das vom [Arukone-Checker](https://www.arukone.bwinf.de/arukone) gelöst werden konnte:
 
 <img src="examples/solved_5x5_arukone.png" width=300px alt="Solved 5x5 Arukone" />
