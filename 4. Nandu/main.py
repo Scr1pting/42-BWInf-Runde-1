@@ -33,7 +33,6 @@ def generate_lights_matrix(construction: list, lamps: dict) -> list:
             if value in lamps.keys():
                 # Set the value of the initial lamps
                 lights_in_row.append(lamps[value])
-                print("Set lamps!")
             elif value.startswith("Q"):
                 # Default all remaining initial lamps to 0
                 lights_in_row.append(1)
@@ -65,7 +64,6 @@ def generate_lights_matrix(construction: list, lamps: dict) -> list:
                 # No need to process following "r" field
                 skip = True
             elif value == "W":
-                print(row_index)
                 # White blocks are off when the two fields that precedes them are both on
                 # Otherwise, they are on
                 status = 0 if lights[row_index - 1][col_index] + lights[row_index - 1][col_index + 1] == 2 else 1
