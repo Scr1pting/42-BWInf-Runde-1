@@ -33,7 +33,7 @@ def split_list_at_empty_elements(input_list: list) -> list:
     return result
 
 
-def find_first_occurrence_3d(arr: list, target: any) -> tuple[int, int, int]:
+def find_first_occurrence_3d(arr: list, target: any) -> tuple:
     """Finds the first occurrence of a target element in a 3d list.
 
     Args:

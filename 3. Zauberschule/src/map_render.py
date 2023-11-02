@@ -89,7 +89,7 @@ def render_path_characters(blueprint: list, path: list) -> str:
 
 
 def render_path(blueprint: list, path: list, render_mode="characters") -> str:
-    """Creates a text guide of a path, either by using lines or characters
+    """Creates a text guide of a path, either by using characters or lines.
 
     Args:
         blueprint (list): 3d list of each fields string value

@@ -199,3 +199,22 @@ Karte: [hello](examples/zauberschule5/karte_symbole_5.txt)
 
 ## Quelltext
 
+
+Der Quelltext besteht aus drei Dateien:
+
+### main.py
+
+- `split_list_at_empty_elements(input_list: list) -> list` — Teilt eine Liste in eine mehrdimensionale Liste mit einem leeren Element, wie [].
+- `find_first_occurrence_3d(arr: list, target: any) -> tuple` — Findet das erste Vorkommen eines Zielelements in einer 3d-Liste..
+- `start_command_line_interface()` — Startet eine Konsole und fragt den Benutzer nach dem Pfad zum Bauplan, dem Speicherpfad und dem Rendermodus. Speichert die Karte.
+
+### path.py
+
+- `get_surrounding_elements_3d(arr: list, level: int, row: int, col: int) -> list` — Ermittelt die Elemente, die sich in einer 3d-Liste neben einem Element befinden.
+- `find_fastest_path(blueprint: list, location_a: tuple, location_b: tuple) -> list` — Findet den schnellsten Weg in einer 3d-Liste zwischen Punkt a und b.
+
+### map_render.py
+
+- `render_path_lines(blueprint: list, path: list) -> list` — Erstellt eine Karte aus Textlinien.
+- `render_path_characters(blueprint: list, path: list) -> list` — Erstellt eine Karte in der Symbole die Richtung des Weges angeben.
+- `render_path(blueprint: list, path: list, render_mode="characters") -> str` — Erzeugt eine Karte von einem Weg, entweder mit Symbolen oder mit Linien.

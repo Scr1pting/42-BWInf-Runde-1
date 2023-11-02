@@ -44,7 +44,7 @@ def get_surrounding_elements_3d(arr: list, level: int, row: int, col: int) -> li
 
 
 def find_fastest_path(blueprint: list, location_a: tuple, location_b: tuple) -> list:
-    """Finds the fastest path in a 3d list.
+    """Finds the fastest path in a 3d list between location a and b.
     When a level is changed, it is counted as taking three times as long as moving on the
     same level.
 
