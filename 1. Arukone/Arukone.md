@@ -51,7 +51,7 @@ Falls sein Ergebniss True ist, ergibt auch `is_solvable_arukone` True und das Ar
 ### Nutzung des Programms in der Konsole:
 
 ```
-user@computer Bundeswettbewerb Informatik % python3 generate.py
+user@computer 1. Arukone % python3 generate.py
 Field size: 6
 Number of pairs: 6
 0 0 0 4 0 0
