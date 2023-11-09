@@ -38,13 +38,13 @@ Sie erstellt ein Feld und platziert die Ziffern an zufälligen Stellen. Um zu ü
 
 Die Funktion `is_solvable_arukone` überprüft,  ob ein Arukone lösbar ist. Dafür iteriert sie über jedes Zahlenpaar und findet die Position des ersten Auftretens des Paares. Danach sammelt sie die Ergebnisse der Funktion `find_paths` aus `solve.py` für das Zahlenpaar in der Variable `all_paths`.
 
-Die rekursive Funktion `find_paths` findet alle Wege von einer Ziffer zu der dazugehörigen anderen Ziffer und sammelt sie in einer Liste. Jedes mal, dass die Funktion sich selbst aufruft, wird ein Pfad um einen Block verlängert, bis er schließlich das Ziel erreicht.
+Die rekursive Funktion `find_paths` findet alle Wege von einer Ziffer zu der dazugehörigen anderen Ziffer und sammelt sie in einer Liste. Jedes mal, dass die Funktion sich selbst aufruft, wird ein Pfad um alle angrenzenden Blöcke verlängert, bis er schließlich das Ziel erreicht. Um die angrenzenden Blöcke zu finden, wird die Funktion `get_surrounding_elements` aus der Datei `utility.py` genutzt.
 
-Nachdem `is_solvable_arukone` all Wege zwischen einem Paar für alle Paare erhält, ruft sie die Funktion `has_path_combination`, auch aus `solve.py`, auf.
+Nachdem `is_solvable_arukone` all Wege zwischen einem Paar für alle Paare erhält, ruft sie die Funktion `has_path_combination` auf.
 
 Die Funktion `has_path_combination` überprüft, ob es eine Kombination der Pfäde gibt, bei der kein Element mehr als einmal vorkommt. Wenn ein Element häufiger vorkommt, kreuzen sich zwei Wege, was nicht erlaubt ist.
 
-Falls sein Ergebniss True ist, ergibt auch `is_solvable_arukone` True und das Arukino wird ausgegeben.
+Falls sein Ergebniss True ist, ergibt auch `is_solvable_arukone` True und das Arukino wird ausgegeben. Ansonsten wird der Prozess so lange wiederholt, bis `is_solvable_arukone` True ergibt.
 
 ## Beispiele
 

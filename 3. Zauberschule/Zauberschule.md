@@ -48,7 +48,7 @@ Nachdem `start_command_line_interface` den schnellsten Weg erhalten hat, ruft si
 
 ## Beispiele
 
-Karten werden nur als Symbole dargestellt.
+*Karten werden nur als Symbole, nicht als Linien, dargestellt.*
 
 ### Zauberschule 0
 
