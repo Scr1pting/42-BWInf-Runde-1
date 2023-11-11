@@ -23,7 +23,7 @@ Die Werte der ausgewählten LEDs können nun abgelesen und in die Tabelle einget
 
 ## Umsetzung
 
-Die Lösungsidee wird in Python implementiert.
+Die Lösungsidee wird in Python implementiert.
 
 ```mermaid
 flowchart TB
