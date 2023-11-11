@@ -124,4 +124,4 @@ def start_command_line_interface():
 
 # Check whether generate.py runs as main program
 if __name__ == "__main__":
-    start_command_line_interface
+    start_command_line_interface()
