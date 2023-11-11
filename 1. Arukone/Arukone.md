@@ -1,7 +1,7 @@
 # Arukone
 
-**Team-ID:** 00839 <br>
-**Autor:** Jonas B <br>
+**Team-ID:** 00839 \newline
+**Autor:** Jonas B \newline
 **Datum:** 26. Oktober 2023
 
 ## Inhaltsverzeichnis
@@ -17,9 +17,9 @@ Das Programm erstellt zufällig aufgebaute Arukino-Puzzel. Danach überprüft es
 
 ## Umsetzung
 
-Die Lösungsidee wird in Python implementiert.
+Die Lösungsidee wird in Python implementiert.
 
-```mermaid
+```{.mermaid type=pdf}
 flowchart
     Nutzer -- Größe Feld, <br> Anzahl Zahlenpaare --> generate_arukone
     generate_arukone -- Arukone --> is_solvable_arukone
