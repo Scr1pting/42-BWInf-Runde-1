@@ -1,5 +1,7 @@
 from utility import get_surrounding_elements
 
+import itertools
+
 
 def find_paths(arukone: list, original_path: list) -> list:
     """Recursively finds all paths that lead from a number to its matching number.
@@ -24,7 +26,7 @@ def find_paths(arukone: list, original_path: list) -> list:
     # common element between the original path and surrounding elements.
     # If it does, the path is discarded. It does not provide a new solution as there is already 
     # a path that branches off earlier and only uses unnecessary computing resources.
-    if len(set(original_path) & set(surrounding_elements)) > 1:
+    if len(set(original_path).intersection(surrounding_elements)) > 1:
         return []
     
     # Iterate over each surrounding element
@@ -50,46 +52,33 @@ def find_paths(arukone: list, original_path: list) -> list:
     return valid_paths
 
 
-def has_path_combination(all_paths: list, existing_path_combination: list = [], index: int = 0) -> bool:
-    """Recursively checks if there is a valid combination of paths that connects
-    all pairs of numbers.
+def has_path_combination(all_paths: list) -> bool:
+    """Checks if there is a valid combination of paths that connects all pairs of numbers.
 
     Args:
         all_paths (list): a 3d list containing the paths of all pairs of numbers.
-        existing_path_combination (list, optional): A one-dimensional list containing the tuples of the paths of the previously already checked number pairs. Defaults to [].
-        index (int, optional): Index of the 3d list. Defaults to 0.
 
     Returns:
         bool: whether or not there is a valid combination of paths connecting all pairs of numbers
     """
-
-    # TODO Try using itertools to generate all path combinations. Thereby, the maximum recursion depth of 6 can be circumvented
-
-    # Get a list of the paths at the provided index of the all_paths list
-    paths = all_paths[index]
-
-    # Iterate of each path 
-    for path in paths:
-        # Check that there is no overlap between the new path and the existing combination of paths
-        if len(set(path) & set(existing_path_combination)) == 0:
-            if index == len(all_paths) - 1:
-                # Last element in list
-                # Means that all previous checks succeeded, and that there is a possible solution
-                return True
+    # Define a function to check if there is no overlap between paths of combination
+    def check_no_overlap(combinations):
+        # Iterate through each combination of paths
+        for combination in combinations:
+            # Iterate through all possible, unique combinations of two paths
+            for path_a, path_b in itertools.permutations(combination, r=2):
+                # Check if there is any intersection (overlap) between the two paths
+                if set(path_a).intersection(path_b):
+                    # If there is an overlap, break out of the inner loop
+                    break
             else:
-                # Not at last check yet
-                # Continue checking for the paths that follow.
-                value = has_path_combination(
-                    all_paths=all_paths,
-                    existing_path_combination=existing_path_combination + path,
-                    index=index + 1
-                )
-                
-                # Only return a value if that value is True
-                # Otherwise, the function would return the value of the first path it examined,
-                # even if a valid combination of paths exists
-                if value == True:
-                    return True
+                # If the for loop never invokes break, there is no overlap
+                return True
+        # If there is overlap in at least one pair of paths, return False
+        return False
 
-    # Default to False
-    return False
+    # Generate all possible combinations of paths using itertools.product
+    path_combinations = itertools.product(*all_paths)
+
+    # Call the check_no_overlap function with the generated path combinations and return the result
+    return check_no_overlap(path_combinations)
