@@ -21,7 +21,7 @@ Wenn der zweite Endpunkt erreicht wird, ist der schnellste Pfad erreicht. Der Pf
 
 ## Umsetzung
 
-Die Lösungsidee wird in Python implementiert.
+Die Lösungsidee wird in Python implementiert.
 
 ```mermaid
 flowchart TB
