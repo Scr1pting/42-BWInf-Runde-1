@@ -16,4 +16,4 @@ Zwei Änderungen müssen an der Markdown Datei vorgenommen werden, damit sie in 
 2. Bei [Mermaid](https://github.com/mermaid-js/mermaid) Diagrammen muss die Bezeichnung von `mermaid` zu `{.mermaid format=pdf}` geändert werden, da sonst die Auflösung sehr gering ist
 3. Bilder können nicht als HTML dargestellt werden, sondern nur als Markdown Bilder
 
-Alle Pandoc Änderungen sind in den Markdown Dateien auskommentiert.
+Alle Pandoc Änderungen sind in den Markdown Dateien als Kommentare hinterlassen.
