@@ -2,6 +2,8 @@
 
 Diese Repository enthält die Lösungen der Aufgaben 1, 3 und 4 der ersten Runde des Bundeswettbewerb Informatiks 2023 in den entsprechenden Ordnern.
 
+Die Aufgaben wurden in der Programmiersprache Python bearbeitet.
+
 ## Änderungen der Dokumentation
 
 Die Dokumentation kann vom Markdown in das PDF Format mittels [Pandoc](https://github.com/jgm/pandoc?tab=readme-ov-file#pandoc), [mermaid-filter](https://github.com/raghur/mermaid-filter) und einem PDF Engine wie [basictex](https://tug.org/mactex/morepackages.html) im Fall von MacOS umgewandelt. Um eine Markdown Datei umzuwandeln, muss der folgende Befehl in dem entsprechenden Ordner gegeben werden:
