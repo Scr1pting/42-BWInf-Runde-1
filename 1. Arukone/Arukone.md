@@ -1,7 +1,7 @@
 # Arukone
 
-**Team-ID:** 00839 \newline
-**Autor:** Jonas B \newline
+**Team-ID:** 00839 <!-- <br> --> \newline
+**Autor:** Jonas B <!-- <br> --> \newline
 **Datum:** 26. Oktober 2023
 
 ## Inhaltsverzeichnis
@@ -17,9 +17,10 @@ Das Programm erstellt zufällig aufgebaute Arukino-Puzzel. Danach überprüft es
 
 ## Umsetzung
 
-Die Lösungsidee wird in Python implementiert.
+Die Lösungsidee wird in Python implementiert. 
 
-```{.mermaid type=pdf}
+<!-- ```mermaid -->
+```{.mermaid format=pdf}
 flowchart
     Nutzer -- Größe Feld, <br> Anzahl Zahlenpaare --> generate_arukone
     generate_arukone -- Arukone --> is_solvable_arukone
@@ -36,7 +37,7 @@ Beim Ausführen der Datei `generate.py` wird der Nutzer zuerst nach der Größe 
 
 Sie erstellt ein Feld und platziert die Ziffern an zufälligen Stellen. Um zu überprüfen, ob das generierte Spielfeld lösbar ist, ruft sie die Funktion `is_solvable_arukone` auf. Falls das Arukone nicht lösbar ist, generiert sie ein neues Arukone.
 
-Die Funktion `is_solvable_arukone` überprüft,  ob ein Arukone lösbar ist. Dafür iteriert sie über jedes Zahlenpaar und findet die Position des ersten Auftretens des Paares. Danach sammelt sie die Ergebnisse der Funktion `find_paths` aus `solve.py` für das Zahlenpaar in der Variable `all_paths`.
+Die Funktion `is_solvable_arukone` überprüft, ob ein Arukone lösbar ist. Bei großen Arukonen kann das sehr lange brauchen. Um die Lösbarkeit zu bestimmen, iteriert sie über jedes Zahlenpaar und findet die Position des ersten Auftretens des Paares. Danach sammelt sie die Ergebnisse der Funktion `find_paths` aus `solve.py` für das Zahlenpaar in der Variable `all_paths`.
 
 Die rekursive Funktion `find_paths` findet alle Wege von einer Ziffer zu der dazugehörigen anderen Ziffer und sammelt sie in einer Liste. Jedes mal, dass die Funktion sich selbst aufruft, wird ein Pfad um alle angrenzenden Blöcke verlängert, bis er schließlich das Ziel erreicht. Um die angrenzenden Blöcke zu finden, wird die Funktion `get_surrounding_elements` aus der Datei `utility.py` genutzt.
 
@@ -44,7 +45,7 @@ Nachdem `is_solvable_arukone` all Wege zwischen einem Paar für alle Paare erhä
 
 Die Funktion `has_path_combination` überprüft, ob es eine Kombination der Pfäde gibt, bei der kein Element mehr als einmal vorkommt. Wenn ein Element häufiger vorkommt, kreuzen sich zwei Wege, was nicht erlaubt ist.
 
-Falls sein Ergebniss True ist, ergibt auch `is_solvable_arukone` True und das Arukino wird ausgegeben. Ansonsten wird der Prozess so lange wiederholt, bis `is_solvable_arukone` True ergibt.
+Falls sein Ergebnis True ist, ergibt auch `is_solvable_arukone` True und das Arukino wird ausgegeben. Ansonsten wird der Prozess so lange wiederholt, bis `is_solvable_arukone` True ergibt.
 
 ## Beispiele
 
@@ -64,17 +65,21 @@ Number of pairs: 6
 
 ### Beispiel eines generierten Arukones, das nicht vom [Arukone-Checker](https://www.arukone.bwinf.de/arukone) gelöst werden konnte:
 
-<img src="examples/unsolved_6x6_arukone.png" width=300px alt="Unsolved 6x6 Arukone" />
+![Ausgabe des Arukone-Checkers für ein 6x6 Arukone mit 6 Paaren](examples/unsolved_6x6_arukone.png){ width=300px }
 
-*Ausgabe des Arukone-Checkers für ein 6x6 Arukone mit 6 Paaren*
+<!-- <img src="examples/unsolved_6x6_arukone.png" width=300px alt="Unsolved 6x6 Arukone" />
 
-Das Arukone hätte gelöst werden können, indem die Linie der zweien oberhalb verläuft. Dann hätten die vieren Platz, auch verbunden zu werden.
+*Ausgabe des Arukone-Checkers für ein 6x6 Arukone mit 6 Paaren* -->
+
+Das Arukone hätte gelöst werden können, indem die Linie der Zweien oberhalb anstatt unterhalb  verläuft. Dann hätten die Vieren Platz, auch verbunden zu werden.
 
 ### Beispiel eines generierten Arukones, das vom [Arukone-Checker](https://www.arukone.bwinf.de/arukone) gelöst werden konnte:
 
-<img src="examples/solved_5x5_arukone.png" width=300px alt="Solved 5x5 Arukone" />
+![Ausgabe des Arukone-Checkers für ein 5x5 Arukone mit 4 Paaren](examples/solved_5x5_arukone.png){ width=300px }
 
-*Ausgabe des Arukone-Checkers für ein 5x5 Arukone mit 4 Paaren*
+<!-- <img src="examples/solved_5x5_arukone.png" width=300px alt="Solved 5x5 Arukone" />
+
+*Ausgabe des Arukone-Checkers für ein 5x5 Arukone mit 4 Paaren* -->
 
 ## Quelltext
 

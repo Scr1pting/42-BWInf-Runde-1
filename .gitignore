@@ -154,3 +154,6 @@ cython_debug/
 
 # MacOS folder settings
 .DS_Store
+
+# mermaid-filter logs
+mermaid-filter.err

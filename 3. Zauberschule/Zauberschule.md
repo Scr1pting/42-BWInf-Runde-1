@@ -1,7 +1,7 @@
 # Zauberschule
 
-**Team-ID:** 00839 <br>
-**Autor:** Jonas B <br>
+**Team-ID:** 00839 <br> <!-- \newline -->
+**Autor:** Jonas B <br> <!-- \newline -->
 **Datum:** 2. November 2023
 
 ## Inhaltsverzeichnis
@@ -23,6 +23,7 @@ Wenn der zweite Endpunkt erreicht wird, ist der schnellste Pfad erreicht. Der Pf
 
 Die Lösungsidee wird in Python implementiert.
 
+<!-- ```{.mermaid format=pdf} -->
 ```mermaid
 flowchart TB
     Nutzer -- Bauplanpfad, <br> Speicherpfad, Pfadart --> start_command_line_interface

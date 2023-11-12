@@ -1,7 +1,7 @@
 # Nandu
 
-**Team-ID:** 00839 <br>
-**Autor:** Jonas B <br>
+**Team-ID:** 00839 <br> <!-- \newline -->
+**Autor:** Jonas B <br> <!-- \newline -->
 **Datum:** 29. Oktober 2023
 
 ## Inhaltsverzeichnis
@@ -25,6 +25,7 @@ Die Werte der ausgewählten LEDs können nun abgelesen und in die Tabelle einget
 
 Die Lösungsidee wird in Python implementiert.
 
+<!-- ```{.mermaid format=pdf} -->
 ```mermaid
 flowchart TB
     Nutzer -- Konstruktionspfad, <br> Speicherungseinstellung --> start_command_line_interface
