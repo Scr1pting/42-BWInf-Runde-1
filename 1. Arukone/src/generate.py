@@ -1,4 +1,4 @@
-from utility import get_surrounding_elements
+from utility import get_surrounding_elements_2d
 from solve import find_paths, has_path_combination
 
 import random
@@ -87,7 +87,7 @@ def generate_arukone(field_size: int, pairs: int) -> list:
         # To detect if the same value is directly neighboring, the first element from each
         # tuple containing (value, row, column) is comprehended into a list. It is then
         # checked whether the list already contains the number
-        if field[row][col] == 0 and value not in [element[0] for element in get_surrounding_elements(arr=field, row=row, col=col)]:
+        if field[row][col] == 0 and value not in [element[0] for element in get_surrounding_elements_2d(arr=field, row=row, col=col)]:
             # Fill field
             field[row][col] = value
         else:

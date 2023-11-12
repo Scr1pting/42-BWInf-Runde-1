@@ -39,7 +39,7 @@ Sie erstellt ein Feld und platziert die Ziffern an zufälligen Stellen. Um zu ü
 
 Die Funktion `is_solvable_arukone` überprüft, ob ein Arukone lösbar ist. Bei großen Arukonen kann das sehr lange brauchen. Um die Lösbarkeit zu bestimmen, iteriert sie über jedes Zahlenpaar und findet die Position des ersten Auftretens des Paares. Danach sammelt sie die Ergebnisse der Funktion `find_paths` aus `solve.py` für das Zahlenpaar in der Variable `all_paths`.
 
-Die rekursive Funktion `find_paths` findet alle Wege von einer Ziffer zu der dazugehörigen anderen Ziffer und sammelt sie in einer Liste. Jedes mal, dass die Funktion sich selbst aufruft, wird ein Pfad um alle angrenzenden Blöcke verlängert, bis er schließlich das Ziel erreicht. Um die angrenzenden Blöcke zu finden, wird die Funktion `get_surrounding_elements` aus der Datei `utility.py` genutzt.
+Die rekursive Funktion `find_paths` findet alle Wege von einer Ziffer zu der dazugehörigen anderen Ziffer und sammelt sie in einer Liste. Jedes mal, dass die Funktion sich selbst aufruft, wird ein Pfad um alle angrenzenden Blöcke verlängert, bis er schließlich das Ziel erreicht. Um die angrenzenden Blöcke zu finden, wird die Funktion `get_surrounding_elements_2d` aus der Datei `utility.py` genutzt.
 
 Nachdem `is_solvable_arukone` all Wege zwischen einem Paar für alle Paare erhält, ruft sie die Funktion `has_path_combination` auf.
 
@@ -98,4 +98,4 @@ Der Quelltext besteht aus drei Dateien:
 
 ### utility.py
 
-- `get_surrounding_elements(arr: list, row: int, col: int) -> list` — Ermittelt die Elemente, die sich in einer 2D-Liste neben einem Element befinden.
+- `get_surrounding_elements_2d(arr: list, row: int, col: int) -> list` — Ermittelt die Elemente, die sich in einer 2D-Liste neben einem Element befinden.

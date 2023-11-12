@@ -1,4 +1,4 @@
-def get_surrounding_elements(arr: list, row: int, col: int) -> list:
+def get_surrounding_elements_2d(arr: list, row: int, col: int) -> list:
     """Determines the elements that are next to an element in a 2d list.
     Does not determine diagonally adjacent elements.
 

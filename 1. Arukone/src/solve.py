@@ -1,4 +1,4 @@
-from utility import get_surrounding_elements
+from utility import get_surrounding_elements_2d
 
 import itertools
 
@@ -17,7 +17,7 @@ def find_paths(arukone: list, original_path: list) -> list:
     _, row_last_element, col_last_element = original_path[-1]
 
     # Get the surrounding elements 
-    surrounding_elements = get_surrounding_elements(arukone, row_last_element, col_last_element)
+    surrounding_elements = get_surrounding_elements_2d(arukone, row_last_element, col_last_element)
     
     paths = []
     valid_paths = []
