@@ -14,7 +14,7 @@ pandoc -F mermaid-filter -H ../disable_image_float.tex -o File.pdf File.md
 
 Zwei Änderungen müssen an der Markdown Datei vorgenommen werden, damit sie in eine PDF Datei umgewandelt werden kann:
 
-1. Einfache Zeilenumbrüche, wie bei Team-ID, Autor und Datum müssen durch `\newline` ersetzt werden.
+1. Einfache Zeilenumbrüche, wie bei Team-ID, Autor und Datum müssen durch `\newline` ersetzt werden
 2. Bei [Mermaid](https://github.com/mermaid-js/mermaid) Diagrammen muss die Bezeichnung von `mermaid` zu `{.mermaid format=pdf}` geändert werden, da sonst die Auflösung sehr gering ist
 3. Bilder können nicht als HTML dargestellt werden, sondern nur als Markdown Bilder
 
