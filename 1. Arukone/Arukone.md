@@ -1,7 +1,7 @@
 # Arukone
 
-**Team-ID:** 00839 <!-- <br> --> \newline
-**Autor:** Jonas B <!-- <br> --> \newline
+**Team-ID:** 00839 <br> <!-- \newline -->
+**Autor:** Jonas B <br> <!-- \newline -->
 **Datum:** 26. Oktober 2023
 
 ## Inhaltsverzeichnis
@@ -19,8 +19,8 @@ Das Programm erstellt zufällig aufgebaute Arukino-Puzzel. Danach überprüft es
 
 Die Lösungsidee wird in Python implementiert. 
 
-<!-- ```mermaid -->
-```{.mermaid format=pdf}
+<!-- ```{.mermaid format=pdf} -->
+```mermaid
 flowchart
     Nutzer -- Größe Feld, <br> Anzahl Zahlenpaare --> generate_arukone
     generate_arukone -- Arukone --> is_solvable_arukone
@@ -65,21 +65,21 @@ Number of pairs: 6
 
 ### Beispiel eines generierten Arukones, das nicht vom [Arukone-Checker](https://www.arukone.bwinf.de/arukone) gelöst werden konnte:
 
-![Ausgabe des Arukone-Checkers für ein 6x6 Arukone mit 6 Paaren](examples/unsolved_6x6_arukone.png){ width=300px }
+<!-- ![Ausgabe des Arukone-Checkers für ein 6x6 Arukone mit 6 Paaren](examples/unsolved_6x6_arukone.png){ width=300px } -->
 
-<!-- <img src="examples/unsolved_6x6_arukone.png" width=300px alt="Unsolved 6x6 Arukone" />
+<img src="examples/unsolved_6x6_arukone.png" width=300px alt="Unsolved 6x6 Arukone" />
 
-*Ausgabe des Arukone-Checkers für ein 6x6 Arukone mit 6 Paaren* -->
+*Ausgabe des Arukone-Checkers für ein 6x6 Arukone mit 6 Paaren*
 
 Das Arukone hätte gelöst werden können, indem die Linie der Zweien oberhalb anstatt unterhalb  verläuft. Dann hätten die Vieren Platz, auch verbunden zu werden.
 
 ### Beispiel eines generierten Arukones, das vom [Arukone-Checker](https://www.arukone.bwinf.de/arukone) gelöst werden konnte:
 
-![Ausgabe des Arukone-Checkers für ein 5x5 Arukone mit 4 Paaren](examples/solved_5x5_arukone.png){ width=300px }
+<!-- ![Ausgabe des Arukone-Checkers für ein 5x5 Arukone mit 4 Paaren](examples/solved_5x5_arukone.png){ width=300px } -->
 
-<!-- <img src="examples/solved_5x5_arukone.png" width=300px alt="Solved 5x5 Arukone" />
+<img src="examples/solved_5x5_arukone.png" width=300px alt="Solved 5x5 Arukone" />
 
-*Ausgabe des Arukone-Checkers für ein 5x5 Arukone mit 4 Paaren* -->
+*Ausgabe des Arukone-Checkers für ein 5x5 Arukone mit 4 Paaren*
 
 ## Quelltext
 
