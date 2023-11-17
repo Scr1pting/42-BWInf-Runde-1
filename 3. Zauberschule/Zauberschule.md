@@ -190,16 +190,15 @@ Total length of path: 30 seconds
 
 ### Zauberschule 4
 
-Länge des Pfads: 86 Sekunden <br>
-Karte: [hello](examples/zauberschule4/karte_symbole_4.txt)
+Länge des Pfads: 86 Sekunden <br> <!-- \newline -->
+Karte: [examples/zauberschule4/karte_symbole_4.txt](examples/zauberschule4/karte_symbole_4.txt)
 
 ### Zauberschule 5
 
-Länge des Pfads: 126 Sekunden <br>
-Karte: [hello](examples/zauberschule5/karte_symbole_5.txt)
+Länge des Pfads: 126 Sekunden <br> <!-- \newline -->
+Karte: [examples/zauberschule5/karte_symbole_5.txt](examples/zauberschule5/karte_symbole_5.txt)
 
 ## Quelltext
-
 
 Der Quelltext besteht aus drei Dateien:
 
