@@ -33,7 +33,7 @@ flowchart
 ```
 *Flowchart des Programms. Helferfunktionen wurden ausgelassen*
 
-Beim Ausführen der Datei `generate.py` wird der Nutzer zuerst nach der Größe des Feldes und der Anzahl an Zahlenpaaren gefragt. Danach wird die Funktion `generate_arukone` aufgerufen.
+Beim Ausführen der Datei `main.py` wird der Nutzer zuerst nach der Größe des Feldes und der Anzahl an Zahlenpaaren gefragt. Danach wird die Funktion `generate_arukone` aus der Datei `generate.py` aufgerufen.
 
 Sie erstellt ein Feld und platziert die Ziffern an zufälligen Stellen. Um zu überprüfen, ob das generierte Spielfeld lösbar ist, ruft sie die Funktion `is_solvable_arukone` auf. Falls das Arukone nicht lösbar ist, generiert sie ein neues Arukone.
 
