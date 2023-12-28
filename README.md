@@ -1,4 +1,4 @@
-# 1 Runde des 42. Bundeswettbewerb Informatik
+# 1. Runde des 42. Bundeswettbewerb Informatik
 
 Diese Repository enthält die Lösungen der Aufgaben 1, 3 und 4 der ersten Runde des Bundeswettbewerb Informatiks 2023 in den entsprechenden Ordnern.
 
