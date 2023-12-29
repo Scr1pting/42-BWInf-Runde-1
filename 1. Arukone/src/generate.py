@@ -20,7 +20,7 @@ def find_first_occurrence(arr: list, target: any) -> tuple:
         for col_index, value in enumerate(row):
             if value == target:
                 # Return the indices of the first occurrence
-                return (row_index, col_index)
+                return row_index, col_index
 
     return None # Return None if the element is not found in the list
 
